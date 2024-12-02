@@ -1,0 +1,35 @@
+module my_codelock(seg_led,										//数码
+							led_state,key_confirm,sw_input,		//led，开关，按键
+							clk,rst										//消抖需要的输入
+							);
+
+	input key_confirm;												//按键=确认
+	input [3:0] sw_input;											//拨动开关=输入密码
+	output [7:0] led_state;
+	reg [7:0] led_state;												//led表示状态
+	reg [8:0] seg_led;
+	output [8:0] seg_led;											//数码管提示正确打开	
+	
+	
+	input clk,rst;	
+	
+	always@(*)begin
+	seg_led=9'h00;
+	if (key_confirm==0)begin										//当按下确认开始校对
+	if (sw_input==4'b0101) begin
+		led_state=8'b1111_1111;										//如果密码正确，那就不亮led亮数码板
+		seg_led=9'h3f;										
+		end
+		else begin
+		led_state=8'b0000_0000;
+		end
+	end
+	end
+	 debounce  u1 (                               
+                       .clk (clk),
+                       .rst (rst),
+                       .key (key_confirm),
+                       .key_pulse ()
+                       );
+	
+endmodule
