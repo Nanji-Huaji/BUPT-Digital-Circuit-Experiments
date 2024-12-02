@@ -1,0 +1,112 @@
+|full_adder
+sw[0] => b[0].DATAB
+sw[0] => a[0].DATAB
+sw[1] => b[1].DATAB
+sw[1] => a[1].DATAB
+sw[2] => b[2].DATAB
+sw[2] => a[2].DATAB
+sw[3] => b[3].DATAB
+sw[3] => a[3].DATAB
+cal => comb.IN1
+cal => comb.IN1
+cal => iscal.IN0
+key_confirm_1 => a[0].OUTPUTSELECT
+key_confirm_1 => a[0].IN0
+key_confirm_1 => a[1].OUTPUTSELECT
+key_confirm_1 => a[2].OUTPUTSELECT
+key_confirm_1 => a[3].OUTPUTSELECT
+key_confirm_2 => b[0].OUTPUTSELECT
+key_confirm_2 => b[0].IN0
+key_confirm_2 => b[1].OUTPUTSELECT
+key_confirm_2 => b[2].OUTPUTSELECT
+key_confirm_2 => b[3].OUTPUTSELECT
+seg_led1[0] << seg_led1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[1] << seg_led1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[2] << seg_led1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[3] << seg_led1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[4] << seg_led1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[5] << seg_led1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[6] << seg_led1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[7] << seg_led1[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led1[8] << seg_led1[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[0] << seg_led2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[1] << seg_led2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[2] << seg_led2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[3] << seg_led2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[4] << seg_led2[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[5] << seg_led2[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[6] << seg_led2[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[7] << seg_led2[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led2[8] << seg_led2[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => seg_led2[0]~reg0.CLK
+clk => seg_led2[1]~reg0.CLK
+clk => seg_led2[2]~reg0.CLK
+clk => seg_led2[3]~reg0.CLK
+clk => seg_led2[4]~reg0.CLK
+clk => seg_led2[5]~reg0.CLK
+clk => seg_led2[6]~reg0.CLK
+clk => seg_led2[7]~reg0.CLK
+clk => seg_led2[8]~reg0.CLK
+clk => seg_led1[0]~reg0.CLK
+clk => seg_led1[1]~reg0.CLK
+clk => seg_led1[2]~reg0.CLK
+clk => seg_led1[3]~reg0.CLK
+clk => seg_led1[4]~reg0.CLK
+clk => seg_led1[5]~reg0.CLK
+clk => seg_led1[6]~reg0.CLK
+clk => seg_led1[7]~reg0.CLK
+clk => seg_led1[8]~reg0.CLK
+rst_n => iscal.IN1
+rst_n => b[0].IN1
+rst_n => a[0].IN1
+
+
+|full_adder|four_adder:u5
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+s[0] <= adder:u0.si
+s[1] <= adder:u1.si
+s[2] <= adder:u2.si
+s[3] <= adder:u3.si
+ci => ci.IN1
+cout <= adder:u3.ci
+
+
+|full_adder|four_adder:u5|adder:u0
+a => Add0.IN1
+b => Add0.IN2
+ci_1 => Add1.IN4
+si <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+ci <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|four_adder:u5|adder:u1
+a => Add0.IN1
+b => Add0.IN2
+ci_1 => Add1.IN4
+si <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+ci <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|four_adder:u5|adder:u2
+a => Add0.IN1
+b => Add0.IN2
+ci_1 => Add1.IN4
+si <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+ci <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|four_adder:u5|adder:u3
+a => Add0.IN1
+b => Add0.IN2
+ci_1 => Add1.IN4
+si <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+ci <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+

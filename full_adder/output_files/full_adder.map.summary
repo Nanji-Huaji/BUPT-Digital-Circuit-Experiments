@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Dec  2 00:08:19 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : full_adder
+Top-level Entity Name : full_adder
+Family : MAX 10
+Total logic elements : 46
+    Total combinational functions : 46
+    Dedicated logic registers : 14
+Total registers : 14
+Total pins : 27
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
