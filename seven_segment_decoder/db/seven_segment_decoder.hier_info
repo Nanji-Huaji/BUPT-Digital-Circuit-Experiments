@@ -1,0 +1,16 @@
+|seven_segment_decoder
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+seg_led[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_led[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_led[2] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_led[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_led[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_led[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_led[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_led[7] << <GND>
+seg_led[8] << <GND>
+
+
