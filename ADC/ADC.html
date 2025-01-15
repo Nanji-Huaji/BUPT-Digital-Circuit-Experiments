@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Entity&colon; adc&lowbar;controller</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="entity-adc_controller">Entity: adc_controller</h1>
+<ul>
+<li><strong>File</strong>: <a href="ADC.v">ADC.v</a></li>
+</ul>
+<h2 id="diagram">Diagram</h2>
+<p><img src="file:///c:\Verilog\ADC\adc_controller.svg" alt="Diagram" title="Diagram"></p>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th>Port name</th>
+<th>Direction</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>input</td>
+<td>wire</td>
+<td>系统时钟信号</td>
+</tr>
+<tr>
+<td>rst_n</td>
+<td>input</td>
+<td>wire</td>
+<td>复位信号，低电平有效</td>
+</tr>
+<tr>
+<td>start</td>
+<td>input</td>
+<td>wire</td>
+<td>启动信号，启动ADC转换</td>
+</tr>
+<tr>
+<td>data</td>
+<td>output</td>
+<td>[15:0]</td>
+<td>16位ADC数据输出</td>
+</tr>
+<tr>
+<td>busy</td>
+<td>output</td>
+<td></td>
+<td>ADC忙信号，表示ADC正在操作</td>
+</tr>
+<tr>
+<td>cs_n</td>
+<td>output</td>
+<td></td>
+<td>片选信号，低电平有效</td>
+</tr>
+<tr>
+<td>rd_n</td>
+<td>output</td>
+<td></td>
+<td>读信号，低电平有效</td>
+</tr>
+<tr>
+<td>adc_data</td>
+<td>input</td>
+<td>wire [15:0]</td>
+<td>16位ADC数据输入</td>
+</tr>
+</tbody>
+</table>
+<h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state</td>
+<td>reg [3:0]</td>
+<td>状态寄存器，用于保存状态机的当前状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IDLE</td>
+<td></td>
+<td>4'd0</td>
+<td>初始状态，等待启动信号</td>
+</tr>
+<tr>
+<td>START</td>
+<td></td>
+<td>4'd1</td>
+<td>断言cs_n和rd_n以启动ADC转换</td>
+</tr>
+<tr>
+<td>READ</td>
+<td></td>
+<td>4'd2</td>
+<td>读取ADC数据并存储在数据寄存器中</td>
+</tr>
+<tr>
+<td>DONE</td>
+<td></td>
+<td>4'd3</td>
+<td>取消断言cs_n和rd_n，并返回到IDLE状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description">Description</h2>
+<p><code>adc_controller</code> 模块用于控制AD7606 ADC芯片，实现对ADC的启动、数据读取和状态管理。该模块通过状态机控制ADC的操作。</p>
+<h2 id="processes">Processes</h2>
+<ul>
+<li>unnamed: ( @(posedge clk or negedge rst_n) )
+<ul>
+<li><strong>Type:</strong> always</li>
+<li><strong>Description:</strong> 在每个时钟（clk）的上升沿，状态机根据当前状态和输入信号进行状态转换。在复位时（rst_n为低电平），状态机设置为IDLE状态，数据清零，控制信号取消断言。</li>
+</ul>
+</li>
+</ul>
+<h2 id="state-machines">State machines</h2>
+<p><img src="file:///c:\Verilog\ADC\fsm_adc_controller_00.svg" alt="Diagram_state_machine_0" title="Diagram"></p>
+
+            
+            
+        </body>
+        </html>
