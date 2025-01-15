@@ -1,0 +1,18 @@
+Fitter Status : Successful - Mon Dec  2 17:04:32 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : counter60
+Top-level Entity Name : counter60
+Family : MAX 10
+Device : 10M02SCM153I7G
+Timing Models : Final
+Total logic elements : 81 / 2,304 ( 4 % )
+    Total combinational functions : 81 / 2,304 ( 4 % )
+    Dedicated logic registers : 34 / 2,304 ( 1 % )
+Total registers : 34
+Total pins : 21 / 112 ( 19 % )
+Total virtual pins : 0
+Total memory bits : 0 / 110,592 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 32 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0

@@ -1,0 +1,35 @@
+|ls374
+d_in[0] => d[0].DATAIN
+d_in[1] => d[1].DATAIN
+d_in[2] => d[2].DATAIN
+d_in[3] => d[3].DATAIN
+d_in[4] => d[4].DATAIN
+d_in[5] => d[5].DATAIN
+d_in[6] => d[6].DATAIN
+d_in[7] => d[7].DATAIN
+clk => d[0].CLK
+clk => d[1].CLK
+clk => d[2].CLK
+clk => d[3].CLK
+clk => d[4].CLK
+clk => d[5].CLK
+clk => d[6].CLK
+clk => d[7].CLK
+oe_n => d_out[0].OE
+oe_n => d_out[1].OE
+oe_n => d_out[2].OE
+oe_n => d_out[3].OE
+oe_n => d_out[4].OE
+oe_n => d_out[5].OE
+oe_n => d_out[6].OE
+oe_n => d_out[7].OE
+d_out[0] <= d_out[0].DB_MAX_OUTPUT_PORT_TYPE
+d_out[1] <= d_out[1].DB_MAX_OUTPUT_PORT_TYPE
+d_out[2] <= d_out[2].DB_MAX_OUTPUT_PORT_TYPE
+d_out[3] <= d_out[3].DB_MAX_OUTPUT_PORT_TYPE
+d_out[4] <= d_out[4].DB_MAX_OUTPUT_PORT_TYPE
+d_out[5] <= d_out[5].DB_MAX_OUTPUT_PORT_TYPE
+d_out[6] <= d_out[6].DB_MAX_OUTPUT_PORT_TYPE
+d_out[7] <= d_out[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

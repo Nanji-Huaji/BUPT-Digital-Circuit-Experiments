@@ -1,0 +1,45 @@
+|hc595
+sclr_n => shift_dffs[0].ACLR
+sclr_n => shift_dffs[1].ACLR
+sclr_n => shift_dffs[2].ACLR
+sclr_n => shift_dffs[3].ACLR
+sclr_n => shift_dffs[4].ACLR
+sclr_n => shift_dffs[5].ACLR
+sclr_n => shift_dffs[6].ACLR
+sclr_n => shift_dffs[7].ACLR
+si => shift_dffs[0].DATAIN
+sck => shift_dffs[0].CLK
+sck => shift_dffs[1].CLK
+sck => shift_dffs[2].CLK
+sck => shift_dffs[3].CLK
+sck => shift_dffs[4].CLK
+sck => shift_dffs[5].CLK
+sck => shift_dffs[6].CLK
+sck => shift_dffs[7].CLK
+rck => storge_dffs[0].CLK
+rck => storge_dffs[1].CLK
+rck => storge_dffs[2].CLK
+rck => storge_dffs[3].CLK
+rck => storge_dffs[4].CLK
+rck => storge_dffs[5].CLK
+rck => storge_dffs[6].CLK
+rck => storge_dffs[7].CLK
+g_n => qh.OE
+g_n => qg.OE
+g_n => qf.OE
+g_n => qe.OE
+g_n => qd.OE
+g_n => qc.OE
+g_n => qb.OE
+g_n => qa.OE
+qh << qh.DB_MAX_OUTPUT_PORT_TYPE
+qg << qg.DB_MAX_OUTPUT_PORT_TYPE
+qf << qf.DB_MAX_OUTPUT_PORT_TYPE
+qe << qe.DB_MAX_OUTPUT_PORT_TYPE
+qd << qd.DB_MAX_OUTPUT_PORT_TYPE
+qc << qc.DB_MAX_OUTPUT_PORT_TYPE
+qb << qb.DB_MAX_OUTPUT_PORT_TYPE
+qa << qa.DB_MAX_OUTPUT_PORT_TYPE
+qh_qout << <GND>
+
+

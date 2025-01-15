@@ -1,0 +1,27 @@
+// pwm.v PWM 模块，占空比可调（0-255），可加起始偏置
+module pwm (
+    input wire clk,
+    input wire rst,
+    // 占空比
+    input wire [23:0] duty_cycle, // 调整为24位以适应12MHz时钟
+    // 起始偏置
+    input wire [23:0] offset, // 调整为24位以适应12MHz时钟
+    output reg pwm_out
+  );
+  reg [23:0] cnt; // 调整为24位以适应12MHz时钟
+  always @(posedge clk or posedge rst)
+  begin
+    if (rst)
+    begin
+      cnt <= offset % 12000000;
+      pwm_out <= 0;
+    end
+    else
+    begin
+      cnt <= cnt + 1;
+      // 若cnt小于duty_cycle，则输出高电平，否则输出低电平
+      // 通过不断改变的duty_cycle，输出不同占空比的PWM波
+      pwm_out <= (cnt < duty_cycle) ? 1 : 0;
+    end
+  end
+endmodule

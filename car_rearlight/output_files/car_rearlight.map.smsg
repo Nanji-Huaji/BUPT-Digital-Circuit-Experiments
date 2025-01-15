@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at car_rearlight.v(20): object "STOP" differs only in case from object "stop" in the same scope File: C:/Verilog/car_rearlight/car_rearlight.v Line: 20
+Info (10281): Verilog HDL Declaration information at car_rearlight.v(22): object "LEFT" differs only in case from object "left" in the same scope File: C:/Verilog/car_rearlight/car_rearlight.v Line: 22
+Info (10281): Verilog HDL Declaration information at car_rearlight.v(23): object "RIGHT" differs only in case from object "right" in the same scope File: C:/Verilog/car_rearlight/car_rearlight.v Line: 23
+Info (10281): Verilog HDL Declaration information at car_rearlight.v(21): object "GO" differs only in case from object "go" in the same scope File: C:/Verilog/car_rearlight/car_rearlight.v Line: 21
+Info (10281): Verilog HDL Declaration information at car_rearlight.v(24): object "BACK" differs only in case from object "back" in the same scope File: C:/Verilog/car_rearlight/car_rearlight.v Line: 24

@@ -1,0 +1,70 @@
+|breathe
+clk => clk.IN3
+red << pwm:pwm_red.port0
+green << pwm:pwm_green.port0
+blue << pwm:pwm_blue.port0
+
+
+|breathe|pwm:pwm_red
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+clk => out~reg0.CLK
+clk => buffer[0].CLK
+clk => buffer[1].CLK
+clk => buffer[2].CLK
+clk => buffer[3].CLK
+clk => buffer[4].CLK
+clk => buffer[5].CLK
+clk => buffer[6].CLK
+clk => buffer[7].CLK
+
+
+|breathe|pwm:pwm_green
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+clk => out~reg0.CLK
+clk => buffer[0].CLK
+clk => buffer[1].CLK
+clk => buffer[2].CLK
+clk => buffer[3].CLK
+clk => buffer[4].CLK
+clk => buffer[5].CLK
+clk => buffer[6].CLK
+clk => buffer[7].CLK
+
+
+|breathe|pwm:pwm_blue
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+clk => out~reg0.CLK
+clk => buffer[0].CLK
+clk => buffer[1].CLK
+clk => buffer[2].CLK
+clk => buffer[3].CLK
+clk => buffer[4].CLK
+clk => buffer[5].CLK
+clk => buffer[6].CLK
+clk => buffer[7].CLK
+
+

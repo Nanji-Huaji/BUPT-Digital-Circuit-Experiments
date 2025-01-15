@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu Dec 19 14:35:56 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : car_rearlight
+Top-level Entity Name : car_rearlight
+Family : MAX 10
+Device : 10M02SCM153I7G
+Timing Models : Final
+Total logic elements : 156 / 2,304 ( 7 % )
+    Total combinational functions : 156 / 2,304 ( 7 % )
+    Dedicated logic registers : 79 / 2,304 ( 3 % )
+Total registers : 79
+Total pins : 20 / 112 ( 18 % )
+Total virtual pins : 0
+Total memory bits : 0 / 110,592 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 32 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0

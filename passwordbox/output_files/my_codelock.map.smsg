@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at my_codelock.v(29): always construct contains both blocking and non-blocking assignments File: C:/Verilog/passwordbox/my_codelock.v Line: 29

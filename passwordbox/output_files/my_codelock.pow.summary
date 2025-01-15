@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Thu Nov 14 14:31:24 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : my_codelock
+Top-level Entity Name : my_codelock
+Family : MAX 10
+Device : 10M02SCM153I7G
+Power Models : Final
+Total Thermal Power Dissipation : 72.31 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 66.79 mW
+I/O Thermal Power Dissipation : 5.52 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

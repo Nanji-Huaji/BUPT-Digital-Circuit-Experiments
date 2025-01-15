@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sega[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sega[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sega[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sega[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sega[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sega[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sega[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_password[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_password[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_password[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_password[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "key_confirm",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
