@@ -1,0 +1,88 @@
+module pattern(
+	input clk,
+	input rst,
+	output [7:0] row,
+	output [7:0] colR,
+	output [7:0] colG);
+	
+	reg [7:0] r_row;
+	reg [7:0] r_colR;
+	reg [7:0] r_colG;
+	reg [11:0] cnt1;//对系统函数进行计数，计数1k次更新
+	
+	always@(posedge clk or negedge rst)
+	begin
+		if(~rst)
+			cnt1 <= 0;
+		else if (cnt1 == 12'd4000)//4k更新
+			cnt1 <= 0;
+		else
+			cnt1 <= cnt1 +1'b1;
+	end
+	
+	always@(posedge clk or negedge rst)
+	begin
+		if(~rst)
+			begin
+			r_row  <= 8'b00000000;
+			r_colR <= 8'b00000000;
+			r_colG <= 8'b00011000;
+			end
+		else
+			begin
+				if(cnt1>12'd0 && cnt1<12'd1000)
+					begin
+					if( cnt1 % 2 == 0 )
+						begin
+						r_row  <= 8'b11100111;
+						r_colR <= 8'b00000000;
+						r_colG <= 8'b00011000;
+						end
+					else
+						begin
+						r_row  <= 8'b11011011;
+						r_colR <= 8'b00000000;
+						r_colG <= 8'b00100100;
+						end
+					end
+				else if(cnt1>12'd1000 && cnt1<12'd2000)
+					begin
+					r_row  <= 8'b11000011;
+					r_colR <= 8'b00000000;
+					r_colG <= 8'b00111100;
+					end
+				else if(cnt1>12'd2000 && cnt1 <12'd3000)
+					begin
+					if(cnt1%2 == 1)
+						begin
+						r_row  <= 8'b11000011;
+						r_colR <= 8'b00000000;
+						r_colG <= 8'b00111100;
+						end
+					else
+						begin
+						r_row  <= 8'b10111101;
+						r_colR <= 8'b00000000;
+						r_colG <= 8'b01000010;
+						end
+					end
+				else if(cnt1>12'd3000 && cnt1<12'd4000)
+					begin
+					r_row  <= 8'b10000001;
+					r_colR <= 8'b00000000;
+					r_colG <= 8'b01111110;
+					end
+				else
+					begin
+					r_row  <= 8'b00000000;
+					r_colR <= 8'b00000000;
+					r_colG <= 8'b00011000;
+					end
+			end
+	end
+	
+	assign row = r_row;
+	assign colR = r_colR;
+	assign colG = r_colG;
+	
+endmodule

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at pattern.v(86): always construct contains both blocking and non-blocking assignments File: F:/Quartus/File/pattern/pattern.v Line: 86
